@@ -130,26 +130,26 @@
 // console.log(compressString("aabcccccaaa")); 
 // console.log(compressString("dddddddddddddkkkkkkkkkkkkkkkcccccccnnnnnnnnnnndddddddddddddiiiiiiirrrrrntoooooooooowwwmmmmsnnnnnnnndddddddd"));
 
-// function findPairWithSum(arr, target) {
-//     let left = 0, right = arr.length - 1;
+function findPairWithSum(arr, target) {
+    let left = 0, right = arr.length - 1;
 
-//     while (left < right) {
-//         let sum = arr[left] + arr[right];
+    while (left < right) {
+        let sum = arr[left] + arr[right];
 
-//         if (sum === target) {
-//             return [arr[left], arr[right]];
-//         } else if (sum < target) {
-//             left++; 
-//         } else {
-//             right--; 
-//         }
-//     }
-//     return [];
-// }
+        if (sum === target) {
+            return [arr[left], arr[right]];
+        } else if (sum < target) {
+            left++; 
+        } else {
+            right--; 
+        }
+    }
+    return [];
+}
 
-// console.log(findPairWithSum([2, 7, 11, 15], 9)); 
-// console.log(findPairWithSum([1, 3, 4, 5, 6, 8], 10)); 
-// console.log(findPairWithSum([1, 2, 3, 9], 8)); 
+console.log(findPairWithSum([2, 7, 11, 15], 9)); 
+console.log(findPairWithSum([1, 3, 4, 5, 6, 8], 10)); 
+console.log(findPairWithSum([1, 2, 3, 9], 8)); 
 
 
 function longestUniqueSubstring(s) {
