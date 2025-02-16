@@ -63,30 +63,30 @@
 // console.log(arrayIntersection([1, 2, 3, 4], [9, 7, 81, 9])); 
 
 
-// function isPalindrome(str) {
-//     let cleanStr = "";
+function isPalindrome(str) {
+    let cleanStr = "";
     
-//     for (let i = 0; i < str.length; i++) {
-//         let char = str[i];
-//         if (char >= 'A' && char <= 'Z') {
-//             char = String.fromCharCode(char.charCodeAt(0) + 32); 
-//         }
-//         if ((char >= 'a' && char <= 'z') || (char >= '0' && char <= '9')) {
-//             cleanStr += char;
-//         }
-//     }
-//     let left = 0, right = cleanStr.length - 1;
-//     while (left < right) {
-//         if (cleanStr[left] !== cleanStr[right]) {
-//             return false;
-//         }
-//         left++;
-//         right--;
-//     }
-//     return true;
-// }
-// console.log(isPalindrome("Elephant"));
-// console.log(isPalindrome("pop")); 
+    for (let i = 0; i < str.length; i++) {
+        let char = str[i];
+        if (char >= 'A' && char <= 'Z') {
+            char = String.fromCharCode(char.charCodeAt(0) + 32); 
+        }
+        if ((char >= 'a' && char <= 'z') || (char >= '0' && char <= '9')) {
+            cleanStr += char;
+        }
+    }
+    let left = 0, right = cleanStr.length - 1;
+    while (left < right) {
+        if (cleanStr[left] !== cleanStr[right]) {
+            return false;
+        }
+        left++;
+        right--;
+    }
+    return true;
+}
+console.log(isPalindrome("Elephant"));
+console.log(isPalindrome("pop")); 
 
 function rotateArray(arr, k) {
     let n = arr.length;
