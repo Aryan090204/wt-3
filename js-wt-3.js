@@ -88,29 +88,29 @@
 // console.log(isPalindrome("Elephant"));
 // console.log(isPalindrome("pop")); 
 
-// function rotateArray(arr, k) {
-//     let n = arr.length;
-//     if (n === 0 || k === 0) return arr; 
+function rotateArray(arr, k) {
+    let n = arr.length;
+    if (n === 0 || k === 0) return arr; 
 
-//     while (k >= n) {
-//         k -= n;
-//     }
+    while (k >= n) {
+        k -= n;
+    }
 
-//     let rotated = [];
+    let rotated = [];
     
-//     for (let i = n - k; i < n; i++) {
-//         rotated.push(arr[i]);
-//     }
+    for (let i = n - k; i < n; i++) {
+        rotated.push(arr[i]);
+    }
     
-//     for (let i = 0; i < n - k; i++) {
-//         rotated.push(arr[i]);
-//     }
+    for (let i = 0; i < n - k; i++) {
+        rotated.push(arr[i]);
+    }
 
-//     return rotated;
-// }
+    return rotated;
+}
 
-// console.log(rotateArray([1, 2, 3, 4, 5], 2)); 
-// console.log(rotateArray([1, 2, 3, 4, 5], 7)); 
+console.log(rotateArray([1, 2, 3, 4, 5], 2)); 
+console.log(rotateArray([1, 2, 3, 4, 5], 7)); 
 
 function compressString(str) {
     let compressed = "";
