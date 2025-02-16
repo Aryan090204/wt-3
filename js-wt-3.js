@@ -1,66 +1,66 @@
 // Program to create a function that return thre reverse of a string
 
-// function reverse(str) {
-//     let rev = "";
-//     for (let i = str.length - 1; i >= 0; i--) {
-//         rev+= str[i];
-//     }
-//     return rev;
-// }
-// console.log(reverse("Palindrome"));
-// console.log(reverse("Jai Shree Ram"));
-// console.log(reverse("Geekster"));
+function reverse(str) {
+    let rev = "";
+    for (let i = str.length - 1; i >= 0; i--) {
+        rev+= str[i];
+    }
+    return rev;
+}
+console.log(reverse("Palindrome"));
+console.log(reverse("Jai Shree Ram"));
+console.log(reverse("Geekster"));
 
 //Program to  Implement an algorithm to check if two strings are anagrams of each other (contain the same characters with the same frequency)
 
-// function isAnagram(str1, str2) {
-//     if (str1.length !== str2.length){
-//         return false;
-//     }
+function isAnagram(str1, str2) {
+    if (str1.length !== str2.length){
+        return false;
+    }
     
-//     const countChar = (str) => {
-//         let count = {};
-//         for (let char of str) {
-//             count[char] = (count[char] || 0) + 1;
-//         }
-//         return count;
-//     };
+    const countChar = (str) => {
+        let count = {};
+        for (let char of str) {
+            count[char] = (count[char] || 0) + 1;
+        }
+        return count;
+    };
 
-//     let c1 = countChar(str1);
-//     let c2 = countChar(str2);
+    let c1 = countChar(str1);
+    let c2 = countChar(str2);
 
-//     for (let char in c1) {
-//         if (c1[char] !== c2[char]) return false;
-//     }
-//     return true;
-// }
-// console.log(isAnagram("listen", "silent")); 
+    for (let char in c1) {
+        if (c1[char] !== c2[char]) return false;
+    }
+    return true;
+}
+console.log(isAnagram("listen", "silent")); 
 
-// function arrayIntersection(arr1, arr2) {
-//     let result = [];
+function arrayIntersection(arr1, arr2) {
+    let result = [];
     
-//     for (let i = 0; i < arr1.length; i++) {
-//         let found = false;
-//         for (let k = 0; k < result.length; k++) {
-//             if (result[k] === arr1[i]) {
-//                 found = true;
-//                 break;
-//             }
-//         }
+    for (let i = 0; i < arr1.length; i++) {
+        let found = false;
+        for (let k = 0; k < result.length; k++) {
+            if (result[k] === arr1[i]) {
+                found = true;
+                break;
+            }
+        }
         
-//         if (!found) {
-//             for (let j = 0; j < arr2.length; j++) {
-//                 if (arr1[i] === arr2[j]) {
-//                     result.push(arr1[i]);
-//                     break;
-//                 }
-//             }
-//         }
-//     }
-//     return result;
-// }
-// console.log(arrayIntersection([1, 2, 3, 4], [3, 4, 5, 6])); 
-// console.log(arrayIntersection([1, 2, 3, 4], [9, 7, 81, 9])); 
+        if (!found) {
+            for (let j = 0; j < arr2.length; j++) {
+                if (arr1[i] === arr2[j]) {
+                    result.push(arr1[i]);
+                    break;
+                }
+            }
+        }
+    }
+    return result;
+}
+console.log(arrayIntersection([1, 2, 3, 4], [3, 4, 5, 6])); 
+console.log(arrayIntersection([1, 2, 3, 4], [9, 7, 81, 9])); 
 
 
 function isPalindrome(str) {
