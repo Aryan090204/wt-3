@@ -112,23 +112,23 @@
 // console.log(rotateArray([1, 2, 3, 4, 5], 2)); 
 // console.log(rotateArray([1, 2, 3, 4, 5], 7)); 
 
-// function compressString(str) {
-//     let compressed = "";
-//     let count = 1;
+function compressString(str) {
+    let compressed = "";
+    let count = 1;
 
-//     for (let i = 0; i < str.length; i++) {
-//         if (str[i] === str[i + 1]) {
-//             count++;
-//         } else {
-//             compressed += str[i] + count;
-//             count = 1;
-//         }
-//     }
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === str[i + 1]) {
+            count++;
+        } else {
+            compressed += str[i] + count;
+            count = 1;
+        }
+    }
 
-//     return compressed.length < str.length ? compressed : str;
-// }
-// console.log(compressString("aabcccccaaa")); 
-// console.log(compressString("dddddddddddddkkkkkkkkkkkkkkkcccccccnnnnnnnnnnndddddddddddddiiiiiiirrrrrntoooooooooowwwmmmmsnnnnnnnndddddddd"));
+    return compressed.length < str.length ? compressed : str;
+}
+console.log(compressString("aabcccccaaa")); 
+console.log(compressString("dddddddddddddkkkkkkkkkkkkkkkcccccccnnnnnnnnnnndddddddddddddiiiiiiirrrrrntoooooooooowwwmmmmsnnnnnnnndddddddd"));
 
 function findPairWithSum(arr, target) {
     let left = 0, right = arr.length - 1;
